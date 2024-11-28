@@ -10,7 +10,7 @@ name: 'ASUS ROG MAXIMUS Z690 EXTREME GLACIAL',
 img: 'https://ants.kz/upload/resize_cache/webp/iblock/e98/450_450_1/tzwnq7fu8gl2cc942ftxjfumug86tluq.webp',
 price: 300,
 category: 'motherboard',
-discription: '123123',
+discription: 'information',
 publish_at: '27.11.2024'
     },
     {
@@ -19,7 +19,7 @@ publish_at: '27.11.2024'
         img: 'https://ants.kz/upload/resize_cache/webp/iblock/542/450_450_1/v35oy7vgvk880q13ywpi8a7na0bes4r8.webp',
         price: 200,
         category: 'CPU',
-        discription: '12311123',
+        discription: 'information',
         publish_at: '28.11.2024'
             },
             {
@@ -28,7 +28,7 @@ publish_at: '27.11.2024'
             img: 'https://ants.kz/upload/resize_cache/webp/iblock/a12/450_450_1/llw9pbl326cbubi7h2fwa3z9sh6l067s.webp',
             price: 200,
             category: 'RAM',
-            discription: '123111123',
+            discription: 'information',
              publish_at: '25.11.2024'
             },
             {
@@ -37,7 +37,7 @@ publish_at: '27.11.2024'
             img: 'https://ants.kz/upload/resize_cache/webp/iblock/657/450_450_1/pq2tj2p7tzqtd5mkdbmqfxe16knia8sj.webp',
              price: 2000,
              category: 'GPU',
-             discription: '12543111123',
+             discription: 'information',
              publish_at: '26.11.2024'
              },                    
 ]);
@@ -56,8 +56,16 @@ return (category, searchText) => {
 });
 
 
+const findProductById = computed(() => {
+return (id) => {
+    return products.value.find((product) => product.id == id)
+}
+});
+
+
 return {
     products,
     productsFilteredByCategoryName,
+    findProductById,
 }
 });

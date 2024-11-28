@@ -55,10 +55,10 @@ const resetAll = () => {
       <div class="card-body" style="height: 150px;">
         <h5 class="card-title">{{ product.name }}</h5>
         <p class="card-text">{{product.category}}</p>
-        <p class="card-text">{{ product.price }}</p>
+        <p class="card-text">{{ product.price }}$</p>
       </div>
       <div class="card-footer text-end">
-        <button type="button" class="btn btn-outline-danger m-2">Detail</button>
+        <button type="button" @click="$router.push(`/detail/${product.id}`)" class="btn btn-outline-danger m-2">Detail</button>
         <button type="button" class="btn btn-outline-danger">Cart</button>
       </div>
     </div>
