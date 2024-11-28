@@ -1,4 +1,5 @@
 <script setup>
+import { useCartStore } from '@/stores/cart';
 import { useCategoryStore } from '@/stores/category';
 import { useProductStore } from '@/stores/product';
 import { ref } from 'vue';
@@ -7,6 +8,7 @@ import { ref } from 'vue';
 const productStore = useProductStore ();
 const categoryStore = useCategoryStore();
 const category = ref(null);
+const cartStore = useCartStore();
 const searchText = ref('');
 const products = ref([]);
 products.value = productStore.products; 
@@ -26,6 +28,8 @@ const resetAll = () => {
   category.value = null;
   products.value = productStore.products; 
 }
+
+
 </script>
 
 <template>
@@ -59,7 +63,7 @@ const resetAll = () => {
       </div>
       <div class="card-footer text-end">
         <button type="button" @click="$router.push(`/detail/${product.id}`)" class="btn btn-outline-info m-2">Detail</button>
-        <button type="button" class="btn btn-outline-warning">Cart</button>
+        <button type="button" @click="cartStore.addToCart(product.id)" class="btn btn-outline-warning">Cart</button>
       </div>
     </div>
   </div>
@@ -68,3 +72,4 @@ const resetAll = () => {
     </div>
   </div>
 </template>
+

@@ -12,11 +12,11 @@ const product = productStore.findProductById(route.params.id);
 
 <template>
 <div class="container">
-    <div class="row row-cols-1 row-cols-md-3 ">
+    <div class="row row-cols-1 row-cols-md-3 g-4 row mt-4 ">
   <div class="col">
     <div class="card">
       <img :src="product.img" class="card-img-top">
-      <div class="card-body" style="height: 250px;">
+      <div class="card-body text-center" style="height: 250px;">
         <h5 class="card-title">{{ product.name }}</h5>
         <p class="card-text">{{product.discription}}</p>
        <p class="card-text">{{ product.category }}</p>
