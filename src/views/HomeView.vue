@@ -58,8 +58,8 @@ const resetAll = () => {
         <p class="card-text">{{ product.price }}$</p>
       </div>
       <div class="card-footer text-end">
-        <button type="button" @click="$router.push(`/detail/${product.id}`)" class="btn btn-outline-danger m-2">Detail</button>
-        <button type="button" class="btn btn-outline-danger">Cart</button>
+        <button type="button" @click="$router.push(`/detail/${product.id}`)" class="btn btn-outline-info m-2">Detail</button>
+        <button type="button" class="btn btn-outline-warning">Cart</button>
       </div>
     </div>
   </div>
