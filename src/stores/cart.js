@@ -51,10 +51,9 @@ const productStore = useProductStore();
     });
 
 
-    const totalSum = computed(() =>{
-        return cartList.value.reduce((sum, product) => sum + product.count * product.price, 0)
-    });
-
+    const totalSum = computed(()=>{
+        return cartList.value.reduce((sum,product) => sum + product.count*product.price, 0)
+    })
 
 
     const removeById = (id) => {

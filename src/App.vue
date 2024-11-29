@@ -18,9 +18,6 @@ import { RouterLink, RouterView } from 'vue-router'
         <li class="nav-item">
           <RouterLink class="nav-link" to="/cart">Cart</RouterLink>
         </li>
-        <li class="nav-item">
-          <RouterLink class="nav-link" to="/about">About</RouterLink>
-        </li>
       </ul>
     </div>
   </div>

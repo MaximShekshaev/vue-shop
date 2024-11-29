@@ -28,7 +28,7 @@ const resetAll = () => {
   category.value = null;
   products.value = productStore.products; 
 }
-
+resetAll()
 
 </script>
 

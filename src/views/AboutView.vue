@@ -1,7 +1,8 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>Thanks for your purchase</h1>
   </div>
+  <RouterLink class="btn btn-outline-danger" to="/">Home</RouterLink>
 </template>
 
 <style>
